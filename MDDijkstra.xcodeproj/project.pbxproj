@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D3F6C161DF5EF6600DE2F04 /* MDPriorityQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DB464C81DF4A6DE00C16975 /* MDPriorityQueue.h */; };
+		3DB4649B1DF4A18200C16975 /* MDDijkstra.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB4649A1DF4A18200C16975 /* MDDijkstra.m */; };
+		3DB464CA1DF4A6DE00C16975 /* MDPriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB464C91DF4A6DE00C16975 /* MDPriorityQueue.m */; };
+		3DB464CC1DF4A74300C16975 /* MDDijkstra.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DB464991DF4A18200C16975 /* MDDijkstra.h */; };
+		3DB464D41DF5822600C16975 /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB464D31DF5822600C16975 /* Tests.m */; };
+		3DB464D61DF5822600C16975 /* libMDDijkstra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB464961DF4A18200C16975 /* libMDDijkstra.a */; };
+		3DB464E11DF5994A00C16975 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB464E01DF5994A00C16975 /* TestObject.m */; };
+		3DB464E31DF5BDDA00C16975 /* MDPriorityQueueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB464E21DF5BDDA00C16975 /* MDPriorityQueueTest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DB464D71DF5822600C16975 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DB4648E1DF4A18100C16975 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DB464951DF4A18100C16975;
+			remoteInfo = MDDijkstra;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3DB464941DF4A18100C16975 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				3D3F6C161DF5EF6600DE2F04 /* MDPriorityQueue.h in CopyFiles */,
+				3DB464CC1DF4A74300C16975 /* MDDijkstra.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3D3F6C151DF5E86F00DE2F04 /* MDDijkstraNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDDijkstraNode.h; sourceTree = "<group>"; };
+		3DB464961DF4A18200C16975 /* libMDDijkstra.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMDDijkstra.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DB464991DF4A18200C16975 /* MDDijkstra.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDDijkstra.h; sourceTree = "<group>"; };
+		3DB4649A1DF4A18200C16975 /* MDDijkstra.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDDijkstra.m; sourceTree = "<group>"; };
+		3DB464C81DF4A6DE00C16975 /* MDPriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDPriorityQueue.h; sourceTree = "<group>"; };
+		3DB464C91DF4A6DE00C16975 /* MDPriorityQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDPriorityQueue.m; sourceTree = "<group>"; };
+		3DB464D11DF5822600C16975 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DB464D31DF5822600C16975 /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		3DB464D51DF5822600C16975 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DB464DF1DF5994A00C16975 /* TestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
+		3DB464E01DF5994A00C16975 /* TestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
+		3DB464E21DF5BDDA00C16975 /* MDPriorityQueueTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDPriorityQueueTest.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DB464931DF4A18100C16975 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DB464CE1DF5822600C16975 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DB464D61DF5822600C16975 /* libMDDijkstra.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DB4648D1DF4A18100C16975 = {
+			isa = PBXGroup;
+			children = (
+				3DB464981DF4A18200C16975 /* MDDijkstra */,
+				3DB464D21DF5822600C16975 /* Tests */,
+				3DB464971DF4A18200C16975 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3DB464971DF4A18200C16975 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DB464961DF4A18200C16975 /* libMDDijkstra.a */,
+				3DB464D11DF5822600C16975 /* Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DB464981DF4A18200C16975 /* MDDijkstra */ = {
+			isa = PBXGroup;
+			children = (
+				3DB464991DF4A18200C16975 /* MDDijkstra.h */,
+				3DB4649A1DF4A18200C16975 /* MDDijkstra.m */,
+				3DB464C81DF4A6DE00C16975 /* MDPriorityQueue.h */,
+				3DB464C91DF4A6DE00C16975 /* MDPriorityQueue.m */,
+				3D3F6C151DF5E86F00DE2F04 /* MDDijkstraNode.h */,
+			);
+			path = MDDijkstra;
+			sourceTree = "<group>";
+		};
+		3DB464D21DF5822600C16975 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3DB464D31DF5822600C16975 /* Tests.m */,
+				3DB464D51DF5822600C16975 /* Info.plist */,
+				3DB464DF1DF5994A00C16975 /* TestObject.h */,
+				3DB464E01DF5994A00C16975 /* TestObject.m */,
+				3DB464E21DF5BDDA00C16975 /* MDPriorityQueueTest.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DB464951DF4A18100C16975 /* MDDijkstra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DB4649F1DF4A18200C16975 /* Build configuration list for PBXNativeTarget "MDDijkstra" */;
+			buildPhases = (
+				3DB464921DF4A18100C16975 /* Sources */,
+				3DB464931DF4A18100C16975 /* Frameworks */,
+				3DB464941DF4A18100C16975 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MDDijkstra;
+			productName = MDDijkstra;
+			productReference = 3DB464961DF4A18200C16975 /* libMDDijkstra.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3DB464D01DF5822600C16975 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DB464DB1DF5822600C16975 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				3DB464CD1DF5822600C16975 /* Sources */,
+				3DB464CE1DF5822600C16975 /* Frameworks */,
+				3DB464CF1DF5822600C16975 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DB464D81DF5822600C16975 /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 3DB464D11DF5822600C16975 /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DB4648E1DF4A18100C16975 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "mohamed El Dehairy";
+				TargetAttributes = {
+					3DB464951DF4A18100C16975 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 656PJL646M;
+						ProvisioningStyle = Automatic;
+					};
+					3DB464D01DF5822600C16975 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 656PJL646M;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3DB464911DF4A18100C16975 /* Build configuration list for PBXProject "MDDijkstra" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3DB4648D1DF4A18100C16975;
+			productRefGroup = 3DB464971DF4A18200C16975 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DB464951DF4A18100C16975 /* MDDijkstra */,
+				3DB464D01DF5822600C16975 /* Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DB464CF1DF5822600C16975 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DB464921DF4A18100C16975 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DB4649B1DF4A18200C16975 /* MDDijkstra.m in Sources */,
+				3DB464CA1DF4A6DE00C16975 /* MDPriorityQueue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DB464CD1DF5822600C16975 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DB464E31DF5BDDA00C16975 /* MDPriorityQueueTest.m in Sources */,
+				3DB464D41DF5822600C16975 /* Tests.m in Sources */,
+				3DB464E11DF5994A00C16975 /* TestObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DB464D81DF5822600C16975 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DB464951DF4A18100C16975 /* MDDijkstra */;
+			targetProxy = 3DB464D71DF5822600C16975 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3DB4649D1DF4A18200C16975 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3DB4649E1DF4A18200C16975 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DB464A01DF4A18200C16975 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 656PJL646M;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3DB464A11DF4A18200C16975 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 656PJL646M;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3DB464D91DF5822600C16975 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 656PJL646M;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.meldehairy.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3DB464DA1DF5822600C16975 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 656PJL646M;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.meldehairy.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DB464911DF4A18100C16975 /* Build configuration list for PBXProject "MDDijkstra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DB4649D1DF4A18200C16975 /* Debug */,
+				3DB4649E1DF4A18200C16975 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DB4649F1DF4A18200C16975 /* Build configuration list for PBXNativeTarget "MDDijkstra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DB464A01DF4A18200C16975 /* Debug */,
+				3DB464A11DF4A18200C16975 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DB464DB1DF5822600C16975 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DB464D91DF5822600C16975 /* Debug */,
+				3DB464DA1DF5822600C16975 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DB4648E1DF4A18100C16975 /* Project object */;
+}
