@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MDDijkstraNode.h"
+#import "MDGraphNode.h"
+#import "MDRouteNode.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
  
     @warning : the initializer returns nil pointer if the graph parameter is nil
  */
--(instancetype)initWithGraph:(NSArray<id<MDDijkstraNode>>*)graph NS_DESIGNATED_INITIALIZER;
+-(instancetype)initWithGraph:(NSArray<id<MDGraphNode>>*)graph NS_DESIGNATED_INITIALIZER;
 -(instancetype)init NS_UNAVAILABLE;
 /*!
     @brief Calculates the fastest path between start node and end node in the graph
@@ -28,11 +29,11 @@ NS_ASSUME_NONNULL_BEGIN
  
     @param endIndex   : the end node index in the graph array passed to the initializer
  
-    @return : returns a MDDijkstraNode instance that the represent the path start node and its adjacentNodes property has only one node (next node in the path), and the next node refere to its next node and so on, until the end node is reached, likewise the weights array for each node contain only one weight (the edge weight to the next node).
+    @return : returns a MDRouteNode instance that links to the next route node that links to its next, all the way to the end route node, in a linked list datastructure fashion.
  
     @warning : the returned route head node might be nil, in case there is no route found from the specified start node to the specified end node
  */
--(nullable id<MDDijkstraNode>)findFastestPathBetweenStartNodeAtIndex:(NSUInteger)startIndex endNodeIndex:(NSUInteger)endIndex;
+-(nullable MDRouteNode*)findFastestPathBetweenStartNodeAtIndex:(NSUInteger)startIndex endNodeIndex:(NSUInteger)endIndex;
 @end
 
 NS_ASSUME_NONNULL_END
