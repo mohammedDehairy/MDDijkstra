@@ -1,4 +1,4 @@
 language : objective-c
 script:
-  -xcodebuild -target MDDijkstra
-  -xctool -scheme Tests run-tests -test-sdk iphonesimulator
+  - xcodebuild -target MDDijkstra
+  - xctool -scheme Tests run-tests -test-sdk iphonesimulator
