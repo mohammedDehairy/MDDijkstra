@@ -49,7 +49,7 @@
     MDDijkstra *dijkstra = [[MDDijkstra alloc] initWithGraph:graph];
     
     MDRouteNode *routeNode = [dijkstra findFastestPathBetweenStartNodeAtIndex:0 endNodeIndex:3];
-    
+
     [self validateRoute:routeNode againstGraph:graph];
     
     XCTAssertEqual(routeNode.graphNodeIndex, 0);

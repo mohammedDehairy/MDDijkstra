@@ -17,9 +17,7 @@
 @end
 
 @implementation MDRouteNode
-
 @synthesize visited;
-
 @end
 
 @interface MDDijkstra ()
@@ -109,6 +107,7 @@
             [priorityQueue addObject:adjacentRouteNode];
         }
     }
+
     return [self reverseRoute:resultRouteNode];
 }
 -(MDRouteNode*)reverseRoute:(MDRouteNode*)routeNode{

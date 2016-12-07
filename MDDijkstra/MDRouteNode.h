@@ -24,4 +24,5 @@
     @brief The current accumulated weight of the route from the start graph node, if the current route node is the end route node, then the weight represent the weight of the whole route
  */
 @property(nonatomic,strong,nonnull)NSNumber *routeWeight;
+
 @end
