@@ -44,13 +44,30 @@
     node3.adjacentNodesIndexes = @[@0];
     node3.weights = @[@20];
     
-    MDDijkstra *dijkstra = [[MDDijkstra alloc] initWithGraph:@[node0,node1,node2,node3]];
+    NSArray *graph = @[node0,node1,node2,node3];
+    
+    MDDijkstra *dijkstra = [[MDDijkstra alloc] initWithGraph:graph];
     
     MDRouteNode *routeNode = [dijkstra findFastestPathBetweenStartNodeAtIndex:0 endNodeIndex:3];
+    
+    [self validateRoute:routeNode againstGraph:graph];
     
     XCTAssertEqual(routeNode.graphNodeIndex, 0);
     XCTAssertEqual(routeNode.nextNode.graphNodeIndex, 3);
     XCTAssertEqual(routeNode.nextNode.routeWeight.floatValue, 10.0);
+}
+
+-(void)validateRoute:(MDRouteNode*)routeNode againstGraph:(NSArray<TestGraphNode*>*)graph{
+    MDRouteNode *head = routeNode;
+    double weightCounter = 0;
+    while (head.nextNode) {
+        TestGraphNode *graphNode = graph[head.graphNodeIndex];
+        XCTAssertEqual(weightCounter, head.routeWeight.doubleValue);
+        XCTAssertTrue([graphNode.adjacentNodesIndexes containsObject:[NSNumber numberWithInteger:head.nextNode.graphNodeIndex]]);
+        NSUInteger nextGraphNodeWeightIndex = [graphNode.adjacentNodesIndexes indexOfObject:[NSNumber numberWithInteger:head.nextNode.graphNodeIndex]];
+        weightCounter += graphNode.weights[nextGraphNodeWeightIndex].doubleValue;
+        head = head.nextNode;
+    }
 }
 
 - (void)testPerformanceExample {

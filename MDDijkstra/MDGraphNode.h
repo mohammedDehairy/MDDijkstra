@@ -16,9 +16,9 @@
  
  @discussion If the weight associated with an adjacent node is infinit (i.e there is no edge between them), then simply don't include it in the adjacentNodesIndexes array nor the weights array
  */
-@property(nonatomic,strong,nullable)NSArray<NSNumber*> *adjacentNodesIndexes;
+@property(nonatomic,strong,nullable)NSOrderedSet<NSNumber*> *adjacentNodesIndexes;
 /*!
  @brief Array of adjacent Nodes' weights
  */
-@property(nonatomic,strong,nullable)NSArray<NSNumber*> *weights;
+@property(nonatomic,strong,nullable)NSOrderedSet<NSNumber*> *weights;
 @end

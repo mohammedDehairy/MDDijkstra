@@ -9,6 +9,19 @@
 #import "MDDijkstra.h"
 #import "MDPriorityQueue.h"
 
+@interface MDRouteNode ()
+/*!
+ @brief a Boolean to indicate whether this route node was visited before during graph traversing or not
+ */
+@property(nonatomic,assign)BOOL visited;
+@end
+
+@implementation MDRouteNode
+
+@synthesize visited;
+
+@end
+
 @interface MDDijkstra ()
 @property(nonatomic,strong)NSArray<id<MDGraphNode>> *graph;
 @end
