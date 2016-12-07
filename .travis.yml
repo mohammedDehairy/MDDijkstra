@@ -1,3 +1,4 @@
 language : objective-c
-xcode_project: MDDijkstra.xcodeproj
-xcode_scheme: Tests
+script:
+  -xcodebuild -target MDDijkstra
+  -xctool -scheme Tests run-tests -test-sdk iphonesimulator
