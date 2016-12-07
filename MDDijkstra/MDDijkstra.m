@@ -26,6 +26,10 @@
 
 -(nullable MDRouteNode*)findFastestPathBetweenStartNodeAtIndex:(NSUInteger)startIndex endNodeIndex:(NSUInteger)endIndex{
     
+    if(startIndex >= self.graph.count || endIndex >= self.graph.count){
+        [NSException raise:@"Invalid start or end indexes" format:@"start and end indexes must be less than the passed graph array count"];
+    }
+    
     /**
         Create the priority queue
      **/
@@ -68,11 +72,16 @@
         // Get the graph node associated with the currently visited route node
         id<MDGraphNode> currentGraphNode = self.graph[routeNode.graphNodeIndex];
         
+        if(currentGraphNode.weights.count != currentGraphNode.adjacentNodesIndexes.count){
+            [NSException raise:@"Invalid Graph Node" format:@"A graph node .weights array count must be equal to its .adjacentNodesIndexes array count"];
+        }
+        
         // Loop through all adjacent graph nodes to the currently visited graph node, wrap it in a MDRouteNode, and add it to the queue
         for(NSInteger i = 0; i < currentGraphNode.adjacentNodesIndexes.count; i++){
             
             // Get the adjacent Node weight
             NSNumber *adjacentGraphNodeWeight = currentGraphNode.weights[i];
+            
             // Get the adjacent Node index
             NSNumber *adjacentGraphNodeIndex = currentGraphNode.adjacentNodesIndexes[i];
             
@@ -90,14 +99,15 @@
     return [self reverseRoute:resultRouteNode];
 }
 -(MDRouteNode*)reverseRoute:(MDRouteNode*)routeNode{
-    MDRouteNode *head = routeNode;
-    MDRouteNode *preNode = nil;
+    MDRouteNode *head = routeNode.nextNode;
+    MDRouteNode *preNode = routeNode;
+    preNode.nextNode = nil;
     while (head) {
         MDRouteNode *nextNode = head.nextNode;
         head.nextNode = preNode;
         preNode = head;
         head = nextNode;
     }
-    return head;
+    return preNode;
 }
 @end
