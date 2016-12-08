@@ -50,38 +50,42 @@
     NSUInteger rightChildIndex = index * 2;
     NSUInteger leftChildIndex = index * 2 + 1;
     id parentObj = [self.array objectAtIndex:index];
-    id rightChild = nil;
-    id leftChild = nil;
+    
+    // Two arrays to hold both children and children indexes
+    NSMutableArray *children = [NSMutableArray arrayWithCapacity:2];
+    NSMutableArray<NSNumber*> *childrenIndexes = [NSMutableArray arrayWithCapacity:2];
+    
     if(rightChildIndex < self.array.count){
-        rightChild = [self.array objectAtIndex:rightChildIndex];
+        [children addObject:self.array[rightChildIndex]];
+        [childrenIndexes addObject:[NSNumber numberWithInteger:rightChildIndex]];
     }
     
     if(leftChildIndex < self.array.count){
-        leftChild = [self.array objectAtIndex:leftChildIndex];
+        [children addObject:self.array[leftChildIndex]];
+        [childrenIndexes addObject:[NSNumber numberWithInteger:leftChildIndex]];
     }
     
-    id minChild = nil;
-    NSUInteger minChildIndex = 0;
+    if(children.count == 0){
+        return;
+    }
     
-    if(leftChild && rightChild){
-        if(self.comparatorBlock(leftChild,rightChild) == NSOrderedDescending){
-            minChild = rightChild;
-            minChildIndex = rightChildIndex;
-        }else{
-            minChild = leftChild;
-            minChildIndex = leftChildIndex;
+    // Sort both children and children indexes
+    children = [[children sortedArrayUsingComparator:self.comparatorBlock] mutableCopy];
+    childrenIndexes = [[childrenIndexes sortedArrayUsingComparator:^NSComparisonResult(NSNumber *index1,NSNumber *index2){
+        id child1 = self.array[index1.integerValue];
+        id child2 = self.array[index2.integerValue];
+        return self.comparatorBlock(child1,child2);
+    }] mutableCopy];
+    
+    // if parent is greater than the minimum child, swap them and recurse, else if parent is greater than the max child, then swap and recurse, otherwise then the parent can't be sinked any more
+    if(self.comparatorBlock(parentObj,children[0]) == NSOrderedDescending){
+        [self.array exchangeObjectAtIndex:index withObjectAtIndex:childrenIndexes[0].integerValue];
+        [self sinkObjectAtIndex:childrenIndexes[0].integerValue];
+    }else if(children.count == 2){
+        if(self.comparatorBlock(parentObj,children[1]) == NSOrderedDescending){
+            [self.array exchangeObjectAtIndex:index withObjectAtIndex:childrenIndexes[1].integerValue];
+            [self sinkObjectAtIndex:childrenIndexes[1].integerValue];
         }
-    }else if(leftChild){
-        minChild = leftChild;
-        minChildIndex = leftChildIndex;
-    }else if(rightChild){
-        minChild = rightChild;
-        minChildIndex = rightChildIndex;
-    }
-    
-    if(minChild && self.comparatorBlock(parentObj,minChild) == NSOrderedDescending){
-        [self.array exchangeObjectAtIndex:index withObjectAtIndex:minChildIndex];
-        [self sinkObjectAtIndex:minChildIndex];
     }
 }
 -(id)peekMinObject{
