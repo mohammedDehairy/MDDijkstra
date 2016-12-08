@@ -1,4 +1,6 @@
 language : objective-c
 script:
+  - brew update
+  - brew upgrade xctool
   - xcodebuild -target MDDijkstra
   - xctool -scheme Tests run-tests -test-sdk iphonesimulator
