@@ -40,6 +40,41 @@
     }
 }
 
+- (void)testAddObjectRandom{
+    MDPriorityQueue<NSNumber*> *heap = [[MDPriorityQueue alloc] initWithComparatorBlock:^NSComparisonResult(NSNumber *num1,NSNumber *num2){
+        return [num1 compare:num2];
+    }];
+    
+    NSArray<NSNumber*> *array = [self generatRandomlyShuffledArray];
+    
+    for(NSNumber *number in array){
+        [heap addObject:number];
+    }
+    
+    for(int i = 0; i < 600; i++){
+        NSNumber *minObject = [heap removeMinObject];
+        XCTAssertTrue([minObject isEqual:[NSNumber numberWithInt:i]]);
+    }
+}
+
+- (NSArray<NSNumber*>*)generatRandomlyShuffledArray{
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:600];
+    for(int i = 0; i < 600; i++){
+        [array addObject:[NSNumber numberWithInt:i]];
+    }
+    
+    return [self shuffleArray:array];
+}
+
+-(NSArray*)shuffleArray:(NSMutableArray*)array{
+    for(int i = 0; i < array.count; i++){
+        int remainingCount = array.count-i;
+        int randomIndex = arc4random_uniform(remainingCount);
+        [array exchangeObjectAtIndex:i withObjectAtIndex:randomIndex];
+    }
+    return array;
+}
+
 /*!
  @brief Assert that the designated initializer returns nil instance if the passed comparator block is nil
  */
