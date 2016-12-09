@@ -10,7 +10,6 @@
 		3D3F6C161DF5EF6600DE2F04 /* MDPriorityQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DB464C81DF4A6DE00C16975 /* MDPriorityQueue.h */; };
 		3D4C05351DF8382C0029BFFB /* TestGraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C05341DF8382C0029BFFB /* TestGraphNode.m */; };
 		3D67B9D21DF7120E0073C9A2 /* MDDijkstraTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D67B9D11DF7120E0073C9A2 /* MDDijkstraTest.m */; };
-		3D7A53F21DFAF3E60054D9F3 /* libMDDijkstra.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DB464961DF4A18200C16975 /* libMDDijkstra.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3DB4649B1DF4A18200C16975 /* MDDijkstra.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB4649A1DF4A18200C16975 /* MDDijkstra.m */; };
 		3DB464CA1DF4A6DE00C16975 /* MDPriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB464C91DF4A6DE00C16975 /* MDPriorityQueue.m */; };
 		3DB464CC1DF4A74300C16975 /* MDDijkstra.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DB464991DF4A18200C16975 /* MDDijkstra.h */; };
@@ -31,16 +30,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3D7A53F11DFAF3C30054D9F3 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				3D7A53F21DFAF3E60054D9F3 /* libMDDijkstra.a in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3DB464941DF4A18100C16975 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,7 +154,6 @@
 				3DB464CD1DF5822600C16975 /* Sources */,
 				3DB464CE1DF5822600C16975 /* Frameworks */,
 				3DB464CF1DF5822600C16975 /* Resources */,
-				3D7A53F11DFAF3C30054D9F3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
